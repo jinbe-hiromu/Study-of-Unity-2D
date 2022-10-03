@@ -53,6 +53,18 @@ Edit>Preference>External Tools>External Script Editorで「VS2022」を選択
 
 ![](./Picture/ExternalTools.png)
 
+# Component
+## AudioSourceの追加
+オブジェクトをクリック＞AddComponentをクリック＞「AudioSouce」で検索し，追加する．
+
+![](./Picture/AddAudioComponent.png)
+
+音楽をAudioSourceにアタッチする．
+
+![](./Picture/AttachAudioSource.png)
+
+＊ゲーム開始時点で自動的に音が再生されないように，PlayOnAwakeのチェックを外す．
+
 # Script
 ## アタッチ
 C#Scriptをオブジェクトにアタッチさせる方法
@@ -111,13 +123,49 @@ if (Input.GetMouseButtonUp(0)){   // 0:左クリック，1:右クリック，2:�
 }
 ~~~
 
+## 音の再生
+
+~~~C#
+GetComponent<AudioSource>().Play();
+~~~
+
 ## オブジェクト
+### 取得
+
+~~~C#
+var car = GameObject.Find("car");
+~~~
+
+### テキストに文字を表示
+
+~~~C#
+var distance = GameObject.Find("Distance");
+distance.GetComponent<TextMeshProUGUI>().text = "入力する文字列";
+~~~
+
+(注意)TextMeshProでは標準で日本語を表示できない．日本語を表示するにはp.188を参照する．
+
+### オブジェクトの座標を取得
+
+~~~C#
+var x = GameObject.Find("car").transform.position.x;
+~~~
+
 ### 回転
 
 ~~~C#
 transform.Rotate(0, 0, _rotationSpeed);   // 引数：X，Y，Z軸の回転スピード
 ~~~
 
+### 移動
+
+~~~C#
+transform.Translate(speed, 0, 0);         // 引数：X，Y，Zの移動量
+~~~
+
+### 監督オブジェクト
+
+CreateEmptyで追加した空のオブジェクトに監督スクリプトをアタッチする
 
 # トラブルシューティング
 ## スクリプトをVisualStudioで開こうとするとサポート外といわれる
