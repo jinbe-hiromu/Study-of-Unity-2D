@@ -54,6 +54,12 @@ Edit>Preference>External Tools>External Script Editorで「VS2022」を選択
 ![](./Picture/ExternalTools.png)
 
 # Component
+## オブジェクト
+### レイヤ
+レイヤ番号が大きい順に画面の手前に表示される．
+
+![](./Picture/OrderInLayer.png)
+
 ## AudioSourceの追加
 オブジェクトをクリック＞AddComponentをクリック＞「AudioSouce」で検索し，追加する．
 
@@ -123,6 +129,34 @@ if (Input.GetMouseButtonUp(0)){   // 0:左クリック，1:右クリック，2:�
 }
 ~~~
 
+## キーボード
+キーボードが押されているかの判定．
+押されている場合はtrueを返す
+
+GetKeyDown・・・押した瞬間にtrue
+
+~~~C#
+if(Input.GetKeyDown(KeyCode.LeftArrow)){
+  // 処理
+}
+~~~
+
+GetKey・・・押されている間にtrue
+
+~~~C#
+if(Input.GetKey(KeyCode.LeftArrow)){
+  // 処理
+}
+~~~
+
+GetKeyUp・・・離した瞬間にtrue
+
+~~~C#
+if(Input.GetKeyUp(KeyCode.LeftArrow)){
+  // 処理
+}
+~~~
+
 ## 音の再生
 
 ~~~C#
@@ -134,6 +168,15 @@ GetComponent<AudioSource>().Play();
 
 ~~~C#
 var car = GameObject.Find("car");
+~~~
+
+### 削除
+画面から消えた場合にオブジェクトを削除しないと，ずっと残り続けるので削除する．
+
+~~~C#
+if(transform.position.y < -5.0f){
+  Destroy(gameObject);
+}
 ~~~
 
 ### テキストに文字を表示
