@@ -53,8 +53,30 @@ Edit>Preference>External Tools>External Script Editorで「VS2022」を選択
 
 ![](./Picture/ExternalTools.png)
 
+# Window
+## InspectorWindowの表示方法
+
+InspectorWindowが消えてしまった場合，以下のボタンで復活させる．
+
+![](./Picture/AddInspectorTab.png)
+
 # Component
 ## オブジェクト
+### 色を付ける
+
+1.色Materialの作成
+Projectを右クリック＞Create＞Material
+
+![](./Picture/CreateMaterial.png)
+
+2.色を選択する
+
+![](./Picture/SelectColor.png)
+
+3.オブジェクトにD＆D
+
+![](./Picture/AttachColor.png)
+
 ### レイヤ
 レイヤ番号が大きい順に画面の手前に表示される．
 
