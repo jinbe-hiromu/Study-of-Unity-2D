@@ -584,7 +584,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: -1.05, y: -1.02, z: -6.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1124,6 +1124,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Coin50Prefab: {fileID: 1806916876420358559, guid: 2e00aec2cb681dc4da0e94a40c337c37, type: 3}
   Coin100Prefab: {fileID: 7088123678569027353, guid: 60a2ed03e18b44643883bad9e73df311, type: 3}
+  minusCoin50Prefab: {fileID: 5635820008912908503, guid: b4718999787a96e4fa860efedca00657, type: 3}
+  minusCoin100Prefab: {fileID: 7985478467283677636, guid: ac1d39a48b3042e45a5a93d6da1b0c9e, type: 3}
 --- !u!4 &1769091428
 Transform:
   m_ObjectHideFlags: 0
